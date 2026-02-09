@@ -1,97 +1,219 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Kassensturz ohne Kopfrechnen – offline Bargeld zählen (Schichtwechsel, Kassenabschluss)</title>
-  <meta name="description" content="Bargeld schnell und fehlerfrei zählen: Kassensturz, Kassenabschluss, Schichtwechsel, Wechselgeld. Offline nutzbar, werbefrei, ohne Konto. Für kleine Betriebe, Vereine & Veranstalter (Abendkasse)." />
+  <title>Kassensturz Rechner (offline) – Bargeld zählen für Kassenabschluss & Schichtwechsel</title>
+  <meta name="description" content="Kassensturz-Rechner zum Bargeld zählen: Kassenabschluss, Schichtwechsel, Wechselgeld, Barkasse & Abendkasse. Offline nutzbar, keine Werbung, kein Abo. Sofort-Download.">
+
+  <link rel="canonical" href="https://ankefarnandwilder-sudo.github.io/Kassensturz-ohne-Kopfrechnen/">
+
+  <!-- Open Graph (für Teilen auf WhatsApp/FB etc.) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Kassensturz Rechner (offline) – Bargeld zählen ohne Kopfrechnen">
+  <meta property="og:description" content="Kassenabschluss, Schichtwechsel, Wechselgeld: offline, werbefrei, kein Abo. Sofort-Download.">
+  <meta property="og:locale" content="de_DE">
+
+  <!-- Strukturierte Daten (Google versteht: Produkt + Preis) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Kassensturz ohne Kopfrechnen (offline)",
+    "description": "Kassensturz-Rechner zum Bargeld zählen für Kassenabschluss, Schichtwechsel und Wechselgeld. Offline nutzbar, keine Werbung, kein Abo. Sofort-Download.",
+    "brand": { "@type": "Brand", "name": "Farn & Wilder" },
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "EUR",
+      "price": "14.90",
+      "availability": "https://schema.org/InStock",
+      "url": "https://farnandwilder.gumroad.com/l/ryijr"
+    }
+  }
+  </script>
 
   <style>
-    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; max-width: 920px; margin: 0 auto; padding: 24px; line-height: 1.55; }
-    .badge { display:inline-block; padding: 6px 10px; border:1px solid #ddd; border-radius: 999px; margin: 6px 6px 0 0; font-size: 14px;}
-    .cta { display:inline-block; margin: 10px 12px 0 0; padding: 12px 16px; border-radius: 10px; text-decoration:none; border: 1px solid #111; }
-    .cta-primary { background:#111; color:#fff; }
-    .cta-secondary { background:#fff; color:#111; }
-    .box { border:1px solid #eee; border-radius: 14px; padding: 16px; margin: 16px 0; background:#fafafa; }
-    small { color:#555; }
-    footer { margin-top: 28px; padding-top: 16px; border-top: 1px solid #eee; }
+    body{
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 24px;
+      line-height: 1.6;
+      color:#111;
+    }
+    h1,h2,h3{ line-height:1.25; }
+    .hero{
+      padding: 18px 18px;
+      border:1px solid #eee;
+      border-radius: 16px;
+      background:#fafafa;
+      margin: 18px 0 22px;
+    }
+    .badges span{
+      display:inline-block;
+      padding:6px 12px;
+      border:1px solid #ddd;
+      border-radius:999px;
+      margin:6px 6px 0 0;
+      font-size:14px;
+      background:#fff;
+    }
+    .cta{
+      display:inline-block;
+      margin: 10px 12px 0 0;
+      padding: 14px 18px;
+      border-radius: 10px;
+      text-decoration:none;
+      font-weight:700;
+    }
+    .primary{ background:#111; color:#fff; }
+    .secondary{ background:#fff; color:#111; border:1px solid #111; }
+    .box{
+      border:1px solid #eee;
+      border-radius: 16px;
+      padding: 18px;
+      background:#fafafa;
+      margin: 22px 0;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+    @media(min-width: 900px){
+      .grid{ grid-template-columns: 1fr 1fr; }
+    }
+    .faq details{
+      border:1px solid #eee;
+      border-radius: 12px;
+      padding: 12px 14px;
+      background:#fff;
+      margin: 10px 0;
+    }
+    footer{
+      margin-top: 42px;
+      padding-top: 18px;
+      border-top: 1px solid #eee;
+      font-size: 14px;
+    }
+    small{ color:#555; }
   </style>
 </head>
 
 <body>
-  <h1>Kassensturz ohne Kopfrechnen</h1>
-   <p><strong>Bargeld zählen bei Schichtwechsel, Kassenabschluss und „Kasse stimmt nicht“.</strong><br>
-  Offline nutzbar · Werbefrei · Ohne Konto · In Sekunden fertig</p>
 
-  <div>
-    <span class="badge">Kassensturz</span>
-    <span class="badge">Kassenabschluss</span>
-    <span class="badge">Schichtwechsel / Kassenübergabe</span>
-    <span class="badge">Wechselgeld zählen</span>
-    <span class="badge">Abendkasse (Veranstaltung)</span>
-    <span class="badge">Barkasse (Verein)</span>
+  <h1>Kassensturz Rechner (offline): Bargeld zählen für Kassenabschluss & Schichtwechsel</h1>
+
+  <div class="hero">
+    <p><strong>Bargeld zählen – schnell, ruhig, ohne Kopfrechnen.</strong><br>
+    Für Kassensturz, Tagesabschluss, Schichtwechsel, Wechselgeld, Barkasse & Abendkasse.</p>
+
+    <div class="badges">
+      <span>Kassensturz</span>
+      <span>Kassenabschluss / Tagesabschluss</span>
+      <span>Schichtwechsel / Kassenübergabe</span>
+      <span>Wechselgeld zählen</span>
+      <span>Abendkasse</span>
+      <span>Barkasse (Verein)</span>
+    </div>
+
+    <div style="margin-top:14px;">
+      <a class="cta primary" href="https://farnandwilder.gumroad.com/l/ryijr" target="_blank" rel="noopener">
+        Sofort-Download kaufen (Gumroad) – 14,90 €
+      </a>
+      <a class="cta secondary" href="https://www.etsy.com/de/listing/1904636331" target="_blank" rel="noopener">
+        Alternativ über Etsy kaufen
+      </a>
+      <p><small>Einmaliger Preis · kein Abo · keine Folgekosten</small></p>
+    </div>
   </div>
 
-  <div class="box">
-    <p>
-      Ich habe dieses Tool gebaut, weil ich selbst täglich Bargeld zählen musste – morgens, abends, bei Schichtwechseln und bei Unklarheiten mit dem Wechselgeld.
-      Apps waren oft voller Werbung oder im Alltag einfach nervig. Dieses Tool macht genau eine Sache:
-      <strong>Bargeld schnell und fehlerfrei zusammenrechnen</strong>.
-    </p>
+  <h2>Was ist „Kassensturz ohne Kopfrechnen“?</h2>
+  <p>
+    Ein kleines Offline-Tool (Rechenhilfe), das Münzen und Scheine sauber zusammenrechnet.
+    Du gibst Stückzahlen ein – die Summe steht sofort da.
+  </p>
+
+  <h2>Wofür wird es gesucht?</h2>
+  <div class="grid">
+    <div class="box">
+      <h3>Kassenabschluss / Tagesabschluss</h3>
+      <p>Am Ende des Tages Bargeld schnell zusammenrechnen – ohne Stress.</p>
+    </div>
+    <div class="box">
+      <h3>Schichtwechsel / Kassenübergabe</h3>
+      <p>Bestand & Wechselgeld prüfen, bevor die nächste Schicht übernimmt.</p>
+    </div>
+    <div class="box">
+      <h3>Wechselgeld zählen</h3>
+      <p>Startbestand und Wechselgeld kontrollieren (morgens oder zwischendurch).</p>
+    </div>
+    <div class="box">
+      <h3>Barkasse / Abendkasse</h3>
+      <p>Für Vereine, Events, Pop-ups: Bargeld zählen ohne Kassensystem.</p>
+    </div>
   </div>
 
-  <h2>Für wen ist das?</h2>
-  <p><strong>Für alle, die mit Bargeld arbeiten und schnell Klarheit brauchen</strong> – ohne Kopfrechnen und ohne Diskussionen.</p>
+  <h2>Für wen ist das Tool?</h2>
   <ul>
-    <li><strong>Gastronomie</strong>: Schichtwechsel, Kassenabschluss, Trinkgeld/Wechselgeld.</li>
-    <li><strong>Einzelhandel</strong>: Kassensturz, Tagesabschluss, wenn die Kasse „nicht stimmt“.</li>
-    <li><strong>Floristik</strong>: Barzahlungen, schnelle Kontrolle, wenn es im Alltag schnell gehen muss.</li>
-    <li><strong>Marktstände / Pop-ups</strong>: mobile Kasse, zügiger Kassensturz ohne Kassensystem.</li>
-    <li><strong>Vereine</strong>: Barkasse bei Veranstaltungen, Kasse zählen und protokollieren.</li>
-    <li><strong>Veranstalter</strong>: Abendkasse, Einlasskasse, Getränke-/Pfandkasse, schnelle Übergaben.</li>
-    <li><strong>Beauty / Dienstleistung</strong>: Baranteil, Tagesabschluss ohne Rechenstress.</li>
+    <li><strong>Gastronomie:</strong> Kassenabschluss, Trinkgeld/Wechselgeld, Schichtwechsel</li>
+    <li><strong>Einzelhandel:</strong> Kassensturz, Tagesabschluss, Bestandsprüfung</li>
+    <li><strong>Floristik:</strong> Barzahlungen, schnelle Kontrolle im Alltag</li>
+    <li><strong>Marktstände & Pop-ups:</strong> mobile Barkasse</li>
+    <li><strong>Vereine & Veranstaltungen:</strong> Abendkasse, Getränkekasse, Pfandkasse</li>
+    <li><strong>Dienstleistung:</strong> Baranteil am Tagesende erfassen</li>
   </ul>
 
-  <h2>Typische Situationen</h2>
-  <ul>
-    <li><strong>Schichtwechsel</strong>: Kassenübergabe ohne Streit, klare Summe.</li>
-    <li><strong>Kassenabschluss</strong>: Abends schnell fertig werden.</li>
-    <li><strong>Zwischendurch prüfen</strong>: Wenn unklar ist, ob Wechselgeld korrekt rausgegeben wurde.</li>
-    <li><strong>Startbestand</strong>: Morgens Wechselgeld und Bestand prüfen.</li>
-  </ul>
-
-  <h2>So funktioniert es</h2>
+  <h2>So funktioniert’s</h2>
   <ol>
-    <li>Du gibst die vorhandenen Geldbeträge ein (Münzen/Scheine).</li>
-    <li>Das Tool rechnet automatisch die Gesamtsumme.</li>
-    <li>Du hast sofort Klarheit – ohne Kopfrechnen.</li>
+    <li>Münzen und Scheine eingeben (Stückzahl)</li>
+    <li>Die Summe wird automatisch berechnet</li>
+    <li>Fertig – Ergebnis direkt nutzen</li>
   </ol>
 
-  <h2>Warum es vielen hilft</h2>
-  <ul>
-    <li>Hilfreich, wenn dich Kopfrechnen stresst oder du bei Zahlen schnell den Überblick verlierst (z. B. Rechenschwäche/Zahlenstress).</li>
-    <li>Offline nutzbar (nach dem ersten Öffnen), kein Konto, keine Werbung.</li>
-    <li>Fokus auf das Wesentliche: zählen → Summe → fertig.</li>
-  </ul>
-
   <div class="box">
-    <h2>Preis</h2>
-    <p><strong>14,90 € einmalig</strong><br>
-    Kein Abo · Keine Folgekosten</p>
+    <h2>Preis & Download</h2>
+    <p><strong>14,90 € einmalig</strong> – kein Abo, keine Folgekosten.</p>
 
-    <a class="cta cta-primary" href="https://farnandwilder.gumroad.com/l/ryijr " target="_blank" rel="noopener">👉 Jetzt kaufen (Gumroad)</a>
-   " target="_blank" rel="noopener">Alternativ auch über Etsy erhältlich </a>
-    <a class="cta cta-secondary" href="https://www.etsy.com/de/listing/1904636331/cash-count-offline-bargeldzahler-furKassen, Schichtwechsel & Tagesabschluss (keine Werbung, kein Abo)
+    <a class="cta primary" href="https://farnandwilder.gumroad.com/l/ryijr" target="_blank" rel="noopener">
+      Kaufen & sofort herunterladen (Gumroad)
+    </a>
+    <a class="cta secondary" href="https://www.etsy.com/de/listing/1904636331" target="_blank" rel="noopener">
+      Alternativ auf Etsy kaufen
+    </a>
 
     <p><small>Hinweis: Bei digitalen Produkten erlischt das Widerrufsrecht mit Beginn des Downloads (Zustimmung beim Kauf).</small></p>
   </div>
 
-  <h2>Wichtiger Hinweis (rechtlich sauber)</h2>
+  <h2>FAQ (häufige Suchfragen)</h2>
+  <div class="faq">
+    <details>
+      <summary><strong>Kann ich damit Bargeld offline zählen?</strong></summary>
+      <p>Ja. Nach dem ersten Öffnen kann die Seite offline genutzt werden (je nach Browser/Cache).</p>
+    </details>
+
+    <details>
+      <summary><strong>Ist das ein Kassensystem?</strong></summary>
+      <p>Nein. Es ist eine Rechenhilfe für Bargeldsummen (Kassensturz/Wechselgeld), kein Kassensystem.</p>
+    </details>
+
+    <details>
+      <summary><strong>Wofür ist das Tool am besten?</strong></summary>
+      <p>Für Kassenabschluss, Schichtwechsel, Wechselgeld zählen, Barkasse und Abendkasse.</p>
+    </details>
+
+    <details>
+      <summary><strong>Gibt es ein Abo?</strong></summary>
+      <p>Nein. Einmal zahlen, dann nutzen.</p>
+    </details>
+  </div>
+
+  <h2>Rechtlicher Hinweis</h2>
   <p>
     <strong>Dieses Tool ist eine Rechenhilfe zur internen Kontrolle von Bargeldbeträgen.</strong>
     Es ersetzt kein Kassensystem und erfüllt keine gesetzlichen Aufzeichnungspflichten (z. B. KassenSichV/AO).
-    Keine Steuer- oder Rechtsberatung. Trotz sorgfältiger Entwicklung kann keine Haftung für Eingabe- oder Rechenfehler übernommen werden – bitte Ergebnisse plausibilisieren.
+    Keine Steuer- oder Rechtsberatung.
   </p>
 
   <footer>
@@ -101,7 +223,6 @@
     </p>
     <p><small>Stand: 2026</small></p>
   </footer>
+
 </body>
 </html>
-
- 
